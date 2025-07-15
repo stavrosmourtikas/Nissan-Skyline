@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html lang=el>
+<html lang="el">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Nissan Skyline-Πίνακας Μοντέλων</title>
     <link rel="stylesheet" href="css/style.css">
@@ -8,84 +9,82 @@
 <body>
     <a id="top"></a>
     <h1>Γνωστά Μοντέλα Nissan Skyline</h1>
-    <button onclick="changeBackground()"
-class="action-button">Αλλαγή Φόντου</button>
-<div class="dropdown-section">
-    <label for="modelSelect">Διάλεξε Μοντέλο:</label>
-    <select id="modelSelect"
-onchange="showModelInfo()">
-<option value="">--Επιλογή--</option>
-<option value="r32">Skyline R32</option>
-<option value="r33">Skyline R33</option>
-<option value="r34">Skyline R34</option>
-    </select>
-</div>
-<div> id="modelInfo" 
-class="model-info"></div>
-<table>
-    <thead>
-        <tr>
-            <th>Μοντέλο</th>
-            <th>Έτος</th>
-            <th>Ιπποδύναμη</th>
-            <th>Κινητήρας</th>
-            <th>Εικόνα</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Skyline R32</td>
-            <td>1989</td>
-            <td>276HP</td>
-            <td>RB26DETT 2.6L Twin Turbo</td>
-            <td><img src="images/r32.jpg" alt="Skyline R32" class="car-img"></td>
-        </tr>
-             <tr>
-            <td>Skyline R33</td>
-            <td>1995</td>
-            <td>276HP</td>
-            <td>RB26DETT 2.6L Twin Turbo</td>
-            <td><img src="images/r33.jpg" alt="Skyline R33" class="car-img"></td>
-        </tr>
-             <tr>
-            <td>Skyline R34</td>
-            <td>1999</td>
-            <td>280HP</td>
-            <td>RB26DETT 2.6L Twin Turbo</td>
-            <td><img src="images/r34.jpg" alt="Skyline R34" class="car-img"></td>
-        </tr>
-    </tbody>
-</table>
-<h2 style="margin-top: 50px;">Δες το Nissan Skyline σε δράση</h2>
-<div class="video-wrapper">
-    <iframne width="560" height="315"
-    src="https://youtu.be/Q5um1Yd3fzA?si=3z4vRbVqPAkvcTTo"
-    title="R32 Skyline Presentation by Jeremy Clarkson" framework="0" allowfullscreen>
-</iframne>
-</div>
-<a href="#top" class="top-button">Επιστροφή στην αρχή</a>
-<script>
-    const colors = ['#f4f4f4', '#e3f2fd', '#fff3e0', '#fce4ec'];
-    let colorIndex=0;
-    function changeBackground() {
-        colorIndex=(colorIndex + 1) % colors.length;
-        document.body.style.backgroundColor = colors[colorIndex];
-    }
-function showModelInfo() {
-    const model = document.getElementsById("modelSelect").value;
-    const infoBox= document.getElementById("modelInfo");
-    let info = '';
-    if (model === "r32" ) {
-        info = "<h3>Skyline R32</h3><p>Έτος: 1989<br>Ιπποδύναμη: 276HP<br>Κινητήρας: RB26DETT</p>";
-    } else if (model === "r33" ) {
-        info = "<h3>Skyline R33</h3><p>Έτος: 1995<br>Ιπποδύναμη: 276HP<br>Κινητήρας: RB26DETT</p>";
-    } else if (model === "r34" ) {
-        info = "<h3>Skyline R34</h3><p>Έτος: 1990<br>Ιπποδύναμη: 280HP<br>Κινητήρας: RB26DETT</p>";
-    } else {
-        info = "";
-    }
-    infoBox.innerHTML = info;
-}
-</script>
+    <button onclick="changeBackground()" class="action-button">Αλλαγή Φόντου</button>
+    <div class="dropdown-section">
+        <label for="modelSelect">Διάλεξε Μοντέλο:</label>
+        <select id="modelSelect" onchange="showModelInfo()">
+            <option value="">--Επιλογή--</option>
+            <option value="r32">Skyline R32</option>
+            <option value="r33">Skyline R33</option>
+            <option value="r34">Skyline R34</option>
+        </select>
+    </div>
+    <div id="modelInfo" class="model-info"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Μοντέλο</th>
+                <th>Έτος</th>
+                <th>Ιπποδύναμη</th>
+                <th>Κινητήρας</th>
+                <th>Εικόνα</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Skyline R32</td>
+                <td>1989</td>
+                <td>276HP</td>
+                <td>RB26DETT 2.6L Twin Turbo</td>
+                <td><img src="images/R32.jpg" alt="Skyline R32" class="car-img"></td>
+            </tr>
+            <tr>
+                <td>Skyline R33</td>
+                <td>1995</td>
+                <td>276HP</td>
+                <td>RB26DETT 2.6L Twin Turbo</td>
+                <td><img src="images/R33.jpg" alt="Skyline R33" class="car-img"></td>
+            </tr>
+            <tr>
+                <td>Skyline R34</td>
+                <td>1999</td>
+                <td>280HP</td>
+                <td>RB26DETT 2.6L Twin Turbo</td>
+                <td><img src="images/R34.jpg" alt="Skyline R34" class="car-img"></td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 style="margin-top: 50px;">Δες το Nissan Skyline σε δράση</h2>
+    <div class="video-wrapper">
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/Q5um1Yd3fzA?si=3z4vRbVqPAkvcTTo"
+                title="R32 Skyline Presentation by Jeremy Clarkson" frameborder="0" allowfullscreen>
+        </iframe>
+    </div>
+    <a href="#top" class="top-button">Επιστροφή στην αρχή</a>
+    <script>
+        const colors = ['#f4f4f4', '#e3f2fd', '#fff3e0', '#fce4ec'];
+        let colorIndex = 0;
+        function changeBackground() {
+            colorIndex = (colorIndex + 1) % colors.length;
+            document.body.style.backgroundColor = colors[colorIndex];
+        }
+
+        function showModelInfo() {
+            const model = document.getElementById("modelSelect").value;
+            const infoBox = document.getElementById("modelInfo");
+            let info = '';
+            if (model === "r32") {
+                info = "<h3>Skyline R32</h3><p>Έτος: 1989<br>Ιπποδύναμη: 276HP<br>Κινητήρας: RB26DETT</p>";
+            } else if (model === "r33") {
+                info = "<h3>Skyline R33</h3><p>Έτος: 1995<br>Ιπποδύναμη: 276HP<br>Κινητήρας: RB26DETT</p>";
+            } else if (model === "r34") {
+                info = "<h3>Skyline R34</h3><p>Έτος: 1999<br>Ιπποδύναμη: 280HP<br>Κινητήρας: RB26DETT</p>";
+            } else {
+                info = "";
+            }
+            infoBox.innerHTML = info;
+        }
+    </script>
 </body>
 </html>
